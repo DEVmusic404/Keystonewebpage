@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import {
   CheckCircle,
   Brain,
@@ -59,8 +60,13 @@ const included = [
 ]
 
 export default function Buy() {
-  // Replace with your Paddle checkout URL
-  const CHECKOUT_URL = '#'
+  useEffect(() => {
+    const script = document.createElement('script')
+    script.src = 'https://assets.lemonsqueezy.com/lemon.js'
+    script.defer = true
+    document.head.appendChild(script)
+    return () => { script.remove() }
+  }, [])
 
   return (
     <>
@@ -109,15 +115,15 @@ export default function Buy() {
               </div>
 
               <a
-                href={CHECKOUT_URL}
-                className={`btn btn-primary ${styles['pricing-cta']}`}
+                href="https://keystonehs.lemonsqueezy.com/checkout/buy/340ec617-bfd6-4b8d-9858-6e7f54e723fb"
+                className={`btn btn-primary ${styles['pricing-cta']} lemonsqueezy-button`}
               >
                 Buy Now <ArrowRight size={18} />
               </a>
 
               <p className={styles['pricing-guarantee']}>
                 <Lock size={14} />
-                Secure checkout
+                Secure checkout powered by Lemon Squeezy
               </p>
             </div>
           </div>

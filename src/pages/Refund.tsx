@@ -47,7 +47,7 @@ export default function Refund() {
 
           <h2>Refund Processing</h2>
           <p>
-            Approved refunds will be processed through our payment provider and
+            Approved refunds will be processed through Lemon Squeezy and
             returned to the original payment method. Processing times may vary
             depending on your payment provider.
           </p>

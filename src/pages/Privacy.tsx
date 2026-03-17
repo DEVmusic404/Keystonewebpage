@@ -19,7 +19,7 @@ export default function Privacy() {
             When you purchase Keystone Homeschool, we collect the information
             necessary to process your transaction, including your name, email
             address, and payment details. Payment processing is handled securely
-            by our payment processor — we do not store your payment card information.
+            by Lemon Squeezy — we do not store your payment card information.
           </p>
 
           <h2>2. How We Use Your Information</h2>
@@ -41,7 +41,7 @@ export default function Privacy() {
 
           <h2>4. Third-Party Services</h2>
           <p>
-            We use a third-party payment processor to handle payments. Their privacy policy
+            We use Lemon Squeezy to process payments. Their privacy policy
             governs how your payment information is handled. We do not sell,
             rent, or share your personal information with any other third
             parties.

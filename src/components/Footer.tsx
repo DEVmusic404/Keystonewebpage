@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Mail, MapPin } from 'lucide-react'
+import { Mail, MapPin, Facebook } from 'lucide-react'
 import styles from './Footer.module.css'
 
 export default function Footer() {
@@ -52,7 +52,14 @@ export default function Footer() {
       <div className={styles['footer-bottom']}>
         <p>&copy; {new Date().getFullYear()} Keystone Homeschool. All rights reserved.</p>
         <div className={styles['footer-socials']}>
-          <span>Built with purpose for homeschool families.</span>
+          <a
+            href="https://www.facebook.com/profile.php?id=61580581059086"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+          >
+            <Facebook size={20} />
+          </a>
         </div>
       </div>
     </footer>
