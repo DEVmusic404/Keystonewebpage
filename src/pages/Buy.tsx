@@ -1,0 +1,175 @@
+import {
+  CheckCircle,
+  Brain,
+  Users,
+  BarChart3,
+  ClipboardCheck,
+  Download,
+  Shield,
+  Infinity,
+  Lock,
+  Zap,
+  ArrowRight,
+  ShieldCheck,
+} from 'lucide-react'
+import styles from './Buy.module.css'
+
+const features = [
+  'AI-Powered Assignment Builder',
+  'Teacher Portal & Student Portal',
+  'Full Grade Tracking System',
+  'Progress Reports & Report Cards',
+  'Export & Import Resources',
+  'Unlimited Students — No Per-Seat Cost',
+  'Full Editor Control Over All Content',
+  'Lifetime Access — No Subscriptions',
+]
+
+const included = [
+  {
+    icon: <Brain size={20} />,
+    title: 'AI Assignment Engine',
+    desc: 'Generate custom assignments, quizzes, and reading materials powered by LLM technology.',
+  },
+  {
+    icon: <Users size={20} />,
+    title: 'Dual Portal System',
+    desc: 'Separate teacher and student interfaces for seamless classroom management.',
+  },
+  {
+    icon: <BarChart3 size={20} />,
+    title: 'Grade Book & Analytics',
+    desc: 'Automatic grade tracking with clear performance insights for every student.',
+  },
+  {
+    icon: <ClipboardCheck size={20} />,
+    title: 'Report Generation',
+    desc: 'Create professional report cards and progress reports with a single click.',
+  },
+  {
+    icon: <Download size={20} />,
+    title: 'Export & Import',
+    desc: 'Share and receive assignments and materials with other Keystone families.',
+  },
+  {
+    icon: <Shield size={20} />,
+    title: 'Complete Control',
+    desc: 'Edit every AI-generated piece. You decide exactly what your students learn.',
+  },
+]
+
+export default function Buy() {
+  // Replace with your Paddle checkout URL
+  const CHECKOUT_URL = '#'
+
+  return (
+    <>
+      <section className={styles['buy-hero']}>
+        <div className="container">
+          <h1>
+            Get <span>Keystone Homeschool</span>
+          </h1>
+          <p>
+            One purchase. Full access. No monthly fees. Everything you need
+            to power your homeschool with AI.
+          </p>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section className={styles['pricing-section']}>
+        <div className="container">
+          <div className={styles['pricing-wrapper']}>
+            <div className={styles['pricing-card']}>
+              <div className={styles['pricing-badge']}>Lifetime Access</div>
+              <h2 className={styles['pricing-name']}>
+                Keystone Homeschool Program
+              </h2>
+              <p className={styles['pricing-tagline']}>
+                The complete AI-powered homeschool system
+              </p>
+
+              <div className={styles['pricing-price']}>
+                <span className={styles.currency}>$</span>
+                <span className={styles.amount}>29.99</span>
+              </div>
+              <p className={styles['pricing-note']}>
+                One-time payment &bull; No monthly fees ever
+              </p>
+
+              <div className={styles['pricing-divider']} />
+
+              <div className={styles['pricing-features']}>
+                {features.map((f, i) => (
+                  <div key={i} className={styles['pricing-feature']}>
+                    <CheckCircle size={18} />
+                    {f}
+                  </div>
+                ))}
+              </div>
+
+              <a
+                href={CHECKOUT_URL}
+                className={`btn btn-primary ${styles['pricing-cta']}`}
+              >
+                Buy Now <ArrowRight size={18} />
+              </a>
+
+              <p className={styles['pricing-guarantee']}>
+                <Lock size={14} />
+                Secure checkout
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* What's Included */}
+      <section className={styles['included-section']}>
+        <div className="container">
+          <h2 className="section-title">What's Included</h2>
+          <p className="section-subtitle">
+            Everything you need to run a world-class homeschool — all in one
+            package.
+          </p>
+
+          <div className={styles['included-grid']}>
+            {included.map((item, i) => (
+              <div key={i} className={styles['included-card']}>
+                <div className={styles['included-icon']}>{item.icon}</div>
+                <div className={styles['included-text']}>
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Trust */}
+      <section className={styles['trust-section']}>
+        <div className="container">
+          <div className={styles['trust-row']}>
+            <div className={styles['trust-item']}>
+              <ShieldCheck size={20} />
+              Secure Payment
+            </div>
+            <div className={styles['trust-item']}>
+              <Infinity size={20} />
+              Unlimited Students
+            </div>
+            <div className={styles['trust-item']}>
+              <Zap size={20} />
+              Instant Access
+            </div>
+            <div className={styles['trust-item']}>
+              <Lock size={20} />
+              One-Time Purchase
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
