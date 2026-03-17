@@ -9,9 +9,9 @@ import {
   Globe,
   Handshake,
   ArrowRight,
+  Facebook,
 } from 'lucide-react'
 import styles from './Community.module.css'
-import AssignmentHub from '../components/AssignmentHub'
 
 export default function Community() {
   return (
@@ -25,6 +25,32 @@ export default function Community() {
             Connect with homeschool families, share resources, exchange ideas,
             and grow together. You're never alone on this journey.
           </p>
+        </div>
+      </section>
+
+      {/* Facebook Community Banner */}
+      <section className={styles['fb-banner']}>
+        <div className="container">
+          <div className={styles['fb-banner-inner']}>
+            <div className={styles['fb-banner-icon']}>
+              <Facebook size={40} />
+            </div>
+            <div className={styles['fb-banner-text']}>
+              <h2>Join Us on Facebook</h2>
+              <p>
+                Connect with other Keystone families, share ideas, ask questions,
+                and be part of our growing homeschool community.
+              </p>
+            </div>
+            <a
+              href="https://www.facebook.com/profile.php?id=61580581059086"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn btn-primary btn-large ${styles['fb-banner-btn']}`}
+            >
+              Join the Community <ArrowRight size={18} />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -137,9 +163,6 @@ export default function Community() {
           </div>
         </div>
       </section>
-
-      {/* Assignment Sharing Hub */}
-      <AssignmentHub />
 
       {/* CTA */}
       <section className={styles['community-cta']}>

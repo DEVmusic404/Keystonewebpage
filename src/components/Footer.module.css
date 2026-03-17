@@ -95,6 +95,58 @@
   color: var(--blue-400);
 }
 
+/* ===== Community Banner ===== */
+.footer-community {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(37, 99, 235, 0.06);
+  border: 1px solid rgba(37, 99, 235, 0.15);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.footer-community > svg {
+  color: var(--blue-400);
+  flex-shrink: 0;
+}
+
+.footer-community h4 {
+  font-family: var(--font-accent);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+
+.footer-community p {
+  font-size: 0.9rem;
+  color: var(--silver-dark);
+  line-height: 1.5;
+}
+
+.footer-community-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  padding: 10px 24px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  border-radius: 100px;
+  color: var(--blue-300);
+  font-family: var(--font-accent);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+}
+
+.footer-community-btn:hover {
+  background: rgba(37, 99, 235, 0.25);
+  color: var(--white);
+}
+
 @media (max-width: 768px) {
   .footer-grid {
     grid-template-columns: 1fr;
@@ -109,5 +161,15 @@
 
   .footer::before {
     font-size: 0.8rem;
+  }
+
+  .footer-community {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-community-btn {
+    margin-left: 0;
   }
 }
