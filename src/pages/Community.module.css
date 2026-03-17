@@ -243,6 +243,58 @@
   position: relative;
 }
 
+/* ===== YouTube Section ===== */
+.yt-section {
+  padding: 60px 0;
+  background: var(--gray-900);
+}
+
+.yt-banner {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.08), rgba(239, 68, 68, 0.04));
+  border: 2px solid rgba(220, 38, 38, 0.2);
+  border-radius: 20px;
+  padding: 48px;
+}
+
+.yt-icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(220, 38, 38, 0.12);
+  border-radius: 50%;
+  color: #ef4444;
+}
+
+.yt-text {
+  flex: 1;
+}
+
+.yt-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.yt-text p {
+  font-size: 1.1rem;
+  color: var(--silver-dark);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+.yt-btn {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 @media (max-width: 768px) {
   .community-features-grid,
   .highlights-grid {
@@ -264,6 +316,16 @@
   }
 
   .fb-banner-text p {
+    max-width: 100%;
+  }
+
+  .yt-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 36px 24px;
+  }
+
+  .yt-text p {
     max-width: 100%;
   }
 }

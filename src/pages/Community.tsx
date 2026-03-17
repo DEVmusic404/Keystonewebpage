@@ -10,6 +10,7 @@ import {
   Handshake,
   ArrowRight,
   Facebook,
+  Youtube,
 } from 'lucide-react'
 import styles from './Community.module.css'
 
@@ -179,6 +180,32 @@ export default function Community() {
             <Link to="/contact" className="btn btn-secondary btn-large">
               Ask Us Anything
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* YouTube Channel */}
+      <section className={styles['yt-section']}>
+        <div className="container">
+          <div className={styles['yt-banner']}>
+            <div className={styles['yt-icon']}>
+              <Youtube size={40} />
+            </div>
+            <div className={styles['yt-text']}>
+              <h2>Watch Us on YouTube</h2>
+              <p>
+                Tutorials, walkthroughs, and tips for getting the most out of
+                Keystone Homeschool. Subscribe to stay up to date.
+              </p>
+            </div>
+            <a
+              href="https://www.youtube.com/@KeystoneHomeschool"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`btn btn-primary btn-large ${styles['yt-btn']}`}
+            >
+              Visit Our Channel <ArrowRight size={18} />
+            </a>
           </div>
         </div>
       </section>
