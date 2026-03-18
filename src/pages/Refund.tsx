@@ -37,8 +37,8 @@ export default function Refund() {
           <h2>How to Request a Refund</h2>
           <p>
             To request a refund, please contact us at{' '}
-            <a href="mailto:support@keystonehomeschool.com">
-              support@keystonehomeschool.com
+            <a href="mailto:contact@keystonehomeschool.com">
+              contact@keystonehomeschool.com
             </a>{' '}
             within 14 days of your purchase. Include your order number and a
             description of the issue. We will review your request and respond
@@ -55,8 +55,8 @@ export default function Refund() {
           <h2>Contact</h2>
           <p>
             If you have any questions about this policy, contact us at{' '}
-            <a href="mailto:support@keystonehomeschool.com">
-              support@keystonehomeschool.com
+            <a href="mailto:contact@keystonehomeschool.com">
+              contact@keystonehomeschool.com
             </a>.
           </p>
         </div>

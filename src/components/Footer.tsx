@@ -38,9 +38,9 @@ export default function Footer() {
 
         <div className={styles['footer-col']}>
           <h4>Contact</h4>
-          <a href="mailto:support@keystonehomeschool.com">
+          <a href="mailto:contact@keystonehomeschool.com">
             <Mail size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />
-            support@keystonehomeschool.com
+            contact@keystonehomeschool.com
           </a>
           <p style={{ color: 'var(--silver-dark)', fontSize: '0.95rem', padding: '6px 0' }}>
             <MapPin size={14} style={{ display: 'inline', marginRight: 6, verticalAlign: 'middle' }} />

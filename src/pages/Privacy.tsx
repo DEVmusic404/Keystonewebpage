@@ -75,8 +75,8 @@ export default function Privacy() {
           <h2>9. Contact</h2>
           <p>
             If you have questions about this policy, contact us at{' '}
-            <a href="mailto:support@keystonehomeschool.com">
-              support@keystonehomeschool.com
+            <a href="mailto:contact@keystonehomeschool.com">
+              contact@keystonehomeschool.com
             </a>.
           </p>
         </div>

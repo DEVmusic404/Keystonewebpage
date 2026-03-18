@@ -67,8 +67,8 @@ export default function Terms() {
           <h2>8. Contact</h2>
           <p>
             If you have questions about these terms, contact us at{' '}
-            <a href="mailto:support@keystonehomeschool.com">
-              support@keystonehomeschool.com
+            <a href="mailto:contact@keystonehomeschool.com">
+              contact@keystonehomeschool.com
             </a>.
           </p>
         </div>

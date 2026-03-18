@@ -64,7 +64,7 @@ export default function Contact() {
                 </div>
                 <div className={styles['contact-item-text']}>
                   <h4>Email Us</h4>
-                  <p>support@keystonehomeschool.com</p>
+                  <p>contact@keystonehomeschool.com</p>
                 </div>
               </div>
 
