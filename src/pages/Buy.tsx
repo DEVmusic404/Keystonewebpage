@@ -83,6 +83,9 @@ export default function Buy() {
             One purchase. Full access. No monthly fees. Everything you need
             to power your homeschool with AI.
           </p>
+          <p className={styles['platform-note']}>
+            Currently available for <strong>Windows</strong> — Linux support coming soon.
+          </p>
         </div>
       </section>
 
