@@ -12,6 +12,10 @@ import {
   Zap,
   ArrowRight,
   ShieldCheck,
+  Monitor,
+  Cpu,
+  MemoryStick,
+  HardDrive,
 } from 'lucide-react'
 import styles from './Buy.module.css'
 
@@ -149,6 +153,46 @@ export default function Buy() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* System Requirements */}
+      <section className={styles['requirements-section']}>
+        <div className="container">
+          <h2 className="section-title">System Requirements</h2>
+          <p className="section-subtitle">
+            Make sure your computer meets these minimum specs before purchasing.
+          </p>
+          <div className={styles['requirements-grid']}>
+            <div className={styles['requirement-card']}>
+              <div className={styles['requirement-icon']}>
+                <Monitor size={28} />
+              </div>
+              <h3>Operating System</h3>
+              <p>Windows 10/11 (64-bit)</p>
+            </div>
+            <div className={styles['requirement-card']}>
+              <div className={styles['requirement-icon']}>
+                <Cpu size={28} />
+              </div>
+              <h3>Processor</h3>
+              <p>4+ cores (quad-core)</p>
+            </div>
+            <div className={styles['requirement-card']}>
+              <div className={styles['requirement-icon']}>
+                <MemoryStick size={28} />
+              </div>
+              <h3>Memory</h3>
+              <p>4 GB RAM minimum</p>
+            </div>
+            <div className={styles['requirement-card']}>
+              <div className={styles['requirement-icon']}>
+                <HardDrive size={28} />
+              </div>
+              <h3>Storage</h3>
+              <p>~1.5 GB free disk space</p>
+            </div>
           </div>
         </div>
       </section>

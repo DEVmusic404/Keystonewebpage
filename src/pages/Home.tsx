@@ -287,6 +287,26 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== Video Promo ===== */}
+      <section className={styles['video-section']}>
+        <div className="container">
+          <h2 className="section-title">See Keystone in Action</h2>
+          <p className="section-subtitle">
+            Watch how Keystone Homeschool makes teaching easier, smarter, and
+            more effective.
+          </p>
+          <div className={styles['video-wrapper']}>
+            <iframe
+              src="https://www.youtube.com/embed/kT8kEnkz3Iw?si=8wSv6Oe47exx5RNQ"
+              title="Keystone Homeschool Promo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* ===== Pricing Banner ===== */}
       <section className={styles['pricing-banner']}>
         <div className="container">
