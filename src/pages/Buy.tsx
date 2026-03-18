@@ -119,7 +119,7 @@ export default function Buy() {
               </div>
 
               <a
-                href="https://keystonehs.lemonsqueezy.com/checkout/buy/340ec617-bfd6-4b8d-9858-6e7f54e723fb"
+                href="https://keystonehs.lemonsqueezy.com/checkout/buy/3a266a3a-1d33-4845-84ad-8c80736a425e?embed=1"
                 className={`btn btn-primary ${styles['pricing-cta']} lemonsqueezy-button`}
               >
                 Buy Now <ArrowRight size={18} />
