@@ -8,6 +8,7 @@ import Buy from './pages/Buy'
 import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import Refund from './pages/Refund'
+import Settings from './pages/Settings'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
+          <Route path="/setup" element={<Settings />} />
         </Routes>
       </main>
       <Footer />

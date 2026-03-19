@@ -20,6 +20,7 @@ export default function Footer() {
           <Link to="/community">Community</Link>
           <Link to="/contact">Contact</Link>
           <Link to="/buy">Get the Program</Link>
+          <Link to="/setup">AI Setup Guide</Link>
         </div>
 
         <div className={styles['footer-col']}>
