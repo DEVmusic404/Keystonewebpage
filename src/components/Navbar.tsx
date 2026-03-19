@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import styles from './Navbar.module.css'
+import logo from '../assets/Keystone LOGO.png'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -25,7 +26,7 @@ export default function Navbar() {
       <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
         <div className={styles['navbar-inner']}>
           <Link to="/" className={styles['navbar-logo']}>
-            <span className={styles['logo-icon']}>K</span>
+            <img src={logo} alt="Keystone Homeschool" className={styles['logo-img']} />
             Keystone <span className={styles['logo-accent']}>Homeschool</span>
           </Link>
 
