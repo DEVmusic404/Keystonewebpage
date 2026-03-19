@@ -25,7 +25,7 @@ export default function Footer() {
 
         <div className={styles['footer-col']}>
           <h4>Product</h4>
-          <Link to="/buy">Features</Link>
+          <Link to="/features">Features</Link>
           <Link to="/buy">Pricing</Link>
           <Link to="/community">Resources</Link>
         </div>

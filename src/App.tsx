@@ -9,6 +9,7 @@ import Terms from './pages/Terms'
 import Privacy from './pages/Privacy'
 import Refund from './pages/Refund'
 import Settings from './pages/Settings'
+import Features from './pages/Features'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/refund" element={<Refund />} />
           <Route path="/setup" element={<Settings />} />
+          <Route path="/features" element={<Features />} />
         </Routes>
       </main>
       <Footer />

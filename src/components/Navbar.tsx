@@ -36,6 +36,7 @@ export default function Navbar() {
               </button>
             )}
             <Link to="/" className={isActive('/')}>Home</Link>
+            <Link to="/features" className={isActive('/features')}>Features</Link>
             <Link to="/community" className={isActive('/community')}>Community</Link>
             <Link to="/contact" className={isActive('/contact')}>Contact</Link>
             <Link to="/setup" className={isActive('/setup')}>AI Setup</Link>
