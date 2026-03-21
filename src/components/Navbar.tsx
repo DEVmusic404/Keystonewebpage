@@ -41,6 +41,7 @@ export default function Navbar() {
             <Link to="/community" className={isActive('/community')}>Community</Link>
             <Link to="/contact" className={isActive('/contact')}>Contact</Link>
             <Link to="/setup" className={isActive('/setup')}>AI Setup</Link>
+            <Link to="/onboarding" className={isActive('/onboarding')}>Onboarding</Link>
             <Link to="/buy" className={`btn btn-primary ${styles['navbar-cta']}`}>
               Get Started
             </Link>
