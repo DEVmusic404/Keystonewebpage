@@ -558,6 +558,329 @@
   margin: 0 auto;
 }
 
+/* ===== Jump Nav ===== */
+
+.jump-nav {
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(37, 99, 235, 0.12);
+}
+
+.jump-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.jump-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.jump-nav a {
+  padding: 14px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--silver-dark);
+  text-decoration: none;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.jump-nav a:hover {
+  color: var(--white);
+  border-bottom-color: var(--blue-400);
+}
+
+/* ===== Explainer Cards ===== */
+
+.explainer-card {
+  display: flex;
+  gap: 24px;
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  margin: 28px 0;
+}
+
+.explainer-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-400);
+  flex-shrink: 0;
+}
+
+.explainer-body h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.explainer-body p {
+  color: var(--silver);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.explainer-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ===== Analogy Box ===== */
+
+.analogy-box {
+  display: flex;
+  gap: 14px;
+  background: rgba(139, 92, 246, 0.06);
+  border: 1px solid rgba(139, 92, 246, 0.15);
+  border-left: 3px solid rgba(139, 92, 246, 0.5);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: 18px 20px;
+  margin: 16px 0;
+}
+
+.analogy-box svg {
+  color: #a78bfa;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.analogy-box p {
+  color: var(--silver);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 0 !important;
+}
+
+/* ===== Quantization Visual ===== */
+
+.quant-visual {
+  margin: 20px 0;
+}
+
+.quant-bar {
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(37, 99, 235, 0.15);
+}
+
+.quant-segment {
+  flex: 1;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.quant-segment strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.quant-segment span {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+.quant-q4 {
+  background: rgba(34, 197, 94, 0.12);
+  color: #4ade80;
+}
+
+.quant-q5 {
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+}
+
+.quant-q8 {
+  background: rgba(168, 85, 247, 0.12);
+  color: #c084fc;
+}
+
+.quant-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 4px 0;
+  font-size: 0.78rem;
+  color: var(--silver-dark);
+}
+
+/* ===== Flow Visual ===== */
+
+.flow-visual {
+  margin: 20px 0;
+}
+
+.flow-step {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(37, 99, 235, 0.04);
+  border: 1px solid rgba(37, 99, 235, 0.1);
+  border-radius: var(--radius-lg);
+}
+
+.flow-step p {
+  margin-bottom: 0 !important;
+  font-size: 0.98rem;
+}
+
+.flow-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.3);
+  color: var(--blue-400);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.flow-arrow {
+  text-align: center;
+  color: var(--blue-400);
+  font-size: 1.2rem;
+  padding: 4px 0;
+}
+
+/* ===== Compare Grid ===== */
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.compare-card {
+  background: var(--gradient-card);
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 28px 24px;
+}
+
+.compare-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  color: var(--blue-400);
+}
+
+.compare-header h4 {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--white);
+}
+
+.compare-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compare-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--silver);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.compare-card li svg {
+  color: #22c55e;
+  flex-shrink: 0;
+}
+
+.compare-note {
+  color: var(--silver-dark) !important;
+  font-size: 0.88rem !important;
+  font-style: italic;
+  padding-top: 4px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===== FAQ ===== */
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.faq-item {
+  border: 1px solid rgba(37, 99, 235, 0.12);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: rgba(37, 99, 235, 0.03);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 1.02rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  gap: 16px;
+  transition: color 0.2s;
+}
+
+.faq-question:hover {
+  color: var(--blue-400);
+}
+
+.faq-question svg {
+  color: var(--blue-400);
+  flex-shrink: 0;
+}
+
+.faq-answer {
+  padding: 0 22px 18px;
+}
+
+.faq-answer p {
+  color: var(--silver);
+  font-size: 0.98rem;
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
 /* ===== Responsive ===== */
 
 @media (max-width: 1024px) {
@@ -602,5 +925,28 @@
 
   .options-title {
     font-size: 1.5rem;
+  }
+
+  .explainer-card {
+    flex-direction: column;
+    padding: 24px 20px;
+  }
+
+  .explainer-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .compare-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jump-nav-inner {
+    padding: 0 16px;
+  }
+
+  .jump-nav a {
+    padding: 12px 12px;
+    font-size: 0.82rem;
   }
 }

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import {
   Download,
   Settings as SettingsIcon,
@@ -13,6 +14,15 @@ import {
   Globe,
   Key,
   Bot,
+  Brain,
+  BookOpen,
+  Package,
+  Layers,
+  Zap,
+  MessageSquare,
+  Library,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react'
 import styles from './Settings.module.css'
 
@@ -68,6 +78,10 @@ const llmModels = [
 ]
 
 export default function Settings() {
+  const [faqOpen, setFaqOpen] = useState<number | null>(null)
+
+  const toggleFaq = (i: number) => setFaqOpen(faqOpen === i ? null : i)
+
   return (
     <>
       <section className={styles['settings-hero']}>
@@ -76,15 +90,245 @@ export default function Settings() {
             AI Setup <span>Guide</span>
           </h1>
           <p>
-            Keystone Homeschool comes with a built-in AI model ready to go.
-            Want more power? Import a GGUF, connect Ollama, or use a cloud
-            provider.
+            Learn how AI works in Keystone, understand the technology behind it,
+            and set up the perfect AI provider for your family — all in one place.
           </p>
         </div>
       </section>
 
+      {/* Jump Nav */}
+      <nav className={styles['jump-nav']}>
+        <div className={styles['jump-nav-inner']}>
+          <a href="#understand-ai">Understanding AI</a>
+          <a href="#built-in">Built-in AI</a>
+          <a href="#providers">Providers</a>
+          <a href="#local-gguf">GGUF Models</a>
+          <a href="#google-gemini">Gemini</a>
+          <a href="#openai">OpenAI</a>
+          <a href="#use-ollama">Ollama</a>
+          <a href="#size-guide">Size Guide</a>
+        </div>
+      </nav>
+
+      {/* ========== UNDERSTANDING AI ========== */}
+      <section id="understand-ai" className={`${styles.section} ${styles.alt}`}>
+        <div className={styles.content}>
+          <div className={styles['section-header']}>
+            <div className={styles['section-icon']}>
+              <Brain size={28} />
+            </div>
+            <h2>Understanding AI — The Basics</h2>
+          </div>
+          <p>
+            Before diving into setup, let&rsquo;s talk about what&rsquo;s actually
+            happening when Keystone generates an assignment for you. You don&rsquo;t
+            need to be a tech expert — just a few minutes here and you&rsquo;ll
+            understand how this all works.
+          </p>
+
+          {/* What is an LLM */}
+          <div className={styles['explainer-card']}>
+            <div className={styles['explainer-icon']}>
+              <MessageSquare size={32} />
+            </div>
+            <div className={styles['explainer-body']}>
+              <h3>What is an LLM?</h3>
+              <p>
+                LLM stands for <strong>Large Language Model</strong>. Think of it as
+                a super well-read assistant that has studied millions of books,
+                articles, textbooks, and websites. When you ask it to create a math
+                worksheet or a reading passage, it uses everything it learned to
+                write something new — just like how you can write a book report
+                after reading the book.
+              </p>
+              <div className={styles['analogy-box']}>
+                <BookOpen size={18} />
+                <p>
+                  <strong>Analogy:</strong> Imagine someone who has read every
+                  textbook in the library. They didn&rsquo;t memorize every word,
+                  but they learned the patterns — how sentences are built, how
+                  math problems are structured, how science concepts are explained.
+                  That&rsquo;s essentially what an LLM does. It learned patterns from
+                  text, and it uses those patterns to generate brand-new content.
+                </p>
+              </div>
+              <p>
+                An LLM doesn&rsquo;t &ldquo;think&rdquo; the way you do. It
+                predicts what words should come next based on the patterns it
+                learned — kind of like the autocomplete on your phone, but
+                dramatically more powerful. Instead of finishing one word, it can
+                write entire essays, math problems, quizzes, and lesson plans.
+              </p>
+            </div>
+          </div>
+
+          {/* What is a GGUF */}
+          <div className={styles['explainer-card']}>
+            <div className={styles['explainer-icon']}>
+              <Package size={32} />
+            </div>
+            <div className={styles['explainer-body']}>
+              <h3>What is a GGUF File?</h3>
+              <p>
+                A full AI model can be absolutely massive — sometimes hundreds of
+                gigabytes. That&rsquo;s way too big for a normal computer.{' '}
+                <strong>GGUF</strong> is a special file format that shrinks the
+                model down so it actually fits on your machine and runs smoothly.
+              </p>
+              <div className={styles['analogy-box']}>
+                <Layers size={18} />
+                <p>
+                  <strong>Analogy:</strong> Think of a massive, ultra-HD movie file
+                  that&rsquo;s 200 GB. You can&rsquo;t really store or stream that
+                  easily. So you compress it into a smaller file — maybe 4 GB —
+                  and it still looks great, just not pixel-perfect at max zoom.
+                  A GGUF file does the same thing for an AI model. It&rsquo;s a
+                  compressed version that runs efficiently on everyday hardware.
+                </p>
+              </div>
+              <p>
+                The compression process is called <strong>quantization</strong>.
+                Different levels of quantization give you different trade-offs:
+              </p>
+              <div className={styles['quant-visual']}>
+                <div className={styles['quant-bar']}>
+                  <div className={`${styles['quant-segment']} ${styles['quant-q4']}`}>
+                    <strong>Q4</strong>
+                    <span>Smallest &middot; Fastest</span>
+                  </div>
+                  <div className={`${styles['quant-segment']} ${styles['quant-q5']}`}>
+                    <strong>Q5</strong>
+                    <span>Balanced</span>
+                  </div>
+                  <div className={`${styles['quant-segment']} ${styles['quant-q8']}`}>
+                    <strong>Q8</strong>
+                    <span>Largest &middot; Best quality</span>
+                  </div>
+                </div>
+                <div className={styles['quant-labels']}>
+                  <span>Less RAM needed &larr;</span>
+                  <span>&rarr; Higher quality output</span>
+                </div>
+              </div>
+              <p>
+                For most families, <strong>Q4_K_M</strong> is the sweet spot — it
+                gives you great results without needing a powerful computer.
+              </p>
+            </div>
+          </div>
+
+          {/* How it works in Keystone */}
+          <div className={styles['explainer-card']}>
+            <div className={styles['explainer-icon']}>
+              <Zap size={32} />
+            </div>
+            <div className={styles['explainer-body']}>
+              <h3>How Does AI Work in Keystone?</h3>
+              <p>Here&rsquo;s what happens behind the scenes when you generate an assignment:</p>
+              <div className={styles['flow-visual']}>
+                <div className={styles['flow-step']}>
+                  <div className={styles['flow-num']}>1</div>
+                  <p><strong>You describe what you want</strong> — a topic, grade level, number of questions</p>
+                </div>
+                <div className={styles['flow-arrow']}>&darr;</div>
+                <div className={styles['flow-step']}>
+                  <div className={styles['flow-num']}>2</div>
+                  <p><strong>Keystone sends your request</strong> to the AI model (local on your computer or cloud)</p>
+                </div>
+                <div className={styles['flow-arrow']}>&darr;</div>
+                <div className={styles['flow-step']}>
+                  <div className={styles['flow-num']}>3</div>
+                  <p><strong>The AI generates content</strong> — questions, answers, reading material</p>
+                </div>
+                <div className={styles['flow-arrow']}>&darr;</div>
+                <div className={styles['flow-step']}>
+                  <div className={styles['flow-num']}>4</div>
+                  <p><strong>You review and edit everything</strong> — change any question, any answer, any text</p>
+                </div>
+              </div>
+              <p>
+                The key thing to remember: <strong>AI is the starting point, not the
+                final product</strong>. You always have full control to edit, adjust,
+                or completely rewrite anything the AI creates. It&rsquo;s a tool that
+                saves you hours of work, but you&rsquo;re always the teacher.
+              </p>
+            </div>
+          </div>
+
+          {/* Local vs Cloud */}
+          <h3 className={styles['sub-heading']}>Local vs. Cloud AI — What&rsquo;s the Difference?</h3>
+          <div className={styles['compare-grid']}>
+            <div className={styles['compare-card']}>
+              <div className={styles['compare-header']}>
+                <HardDrive size={24} />
+                <h4>Local AI</h4>
+              </div>
+              <ul>
+                <li><CheckCircle size={14} /> Runs on your computer — no internet needed</li>
+                <li><CheckCircle size={14} /> Completely private — data never leaves your machine</li>
+                <li><CheckCircle size={14} /> Free forever — no subscriptions or API costs</li>
+                <li><CheckCircle size={14} /> Works offline, anywhere</li>
+                <li className={styles['compare-note']}>Speed depends on your hardware</li>
+              </ul>
+            </div>
+            <div className={styles['compare-card']}>
+              <div className={styles['compare-header']}>
+                <Globe size={24} />
+                <h4>Cloud AI</h4>
+              </div>
+              <ul>
+                <li><CheckCircle size={14} /> More powerful models available</li>
+                <li><CheckCircle size={14} /> Runs on remote servers — no hardware requirements</li>
+                <li><CheckCircle size={14} /> Often faster for complex content</li>
+                <li><CheckCircle size={14} /> Easy setup — just paste an API key</li>
+                <li className={styles['compare-note']}>Requires internet &amp; may have usage costs</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Mini FAQ */}
+          <h3 className={styles['sub-heading']}>Common Questions</h3>
+          <div className={styles['faq-list']}>
+            {[
+              {
+                q: 'Does the AI need internet to work?',
+                a: 'Only if you\'re using a cloud provider (Google Gemini or OpenAI). Local models (GGUF and Ollama) run entirely on your computer with zero internet required.',
+              },
+              {
+                q: 'Is my data private?',
+                a: 'With local models, absolutely — nothing ever leaves your computer. With cloud providers, your assignment prompts are sent to the provider\'s servers to generate content. No student data or grades are ever sent.',
+              },
+              {
+                q: 'Will the AI make mistakes?',
+                a: 'Sometimes. AI is great at creating content quickly, but it\'s not perfect. That\'s why Keystone gives you full editing control over every question, answer, and piece of text. Always review what the AI generates.',
+              },
+              {
+                q: 'Do I need a powerful computer?',
+                a: 'The built-in 1.5B model runs on almost any modern computer. If you want to use larger models (7B+), you\'ll need more RAM and a decent CPU. Check the Size Guide section below for specifics.',
+              },
+            ].map((item, i) => (
+              <div key={i} className={styles['faq-item']}>
+                <button
+                  className={styles['faq-question']}
+                  onClick={() => toggleFaq(i)}
+                  aria-expanded={faqOpen === i}
+                >
+                  <span>{item.q}</span>
+                  {faqOpen === i ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+                </button>
+                {faqOpen === i && (
+                  <div className={styles['faq-answer']}>
+                    <p>{item.a}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Built-in AI */}
-      <section className={styles.section}>
+      <section id="built-in" className={styles.section}>
         <div className={styles.content}>
           <div className={styles['section-header']}>
             <div className={styles['section-icon']}>
@@ -120,7 +364,7 @@ export default function Settings() {
       </section>
 
       {/* 4 Provider Overview */}
-      <section className={`${styles.section} ${styles.alt}`}>
+      <section id="providers" className={`${styles.section} ${styles.alt}`}>
         <div className={styles['content-wide']}>
           <h2 className={styles['options-title']}>AI Provider Options</h2>
           <p className={styles['options-subtitle']}>
@@ -558,7 +802,7 @@ export default function Settings() {
       </section>
 
       {/* LLM Comparison */}
-      <section className={styles.section}>
+      <section id="size-guide" className={styles.section}>
         <div className={styles['content-wide']}>
           <div className={styles['section-header']}>
             <div className={styles['section-icon']}>
