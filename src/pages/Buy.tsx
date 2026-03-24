@@ -121,7 +121,9 @@ export default function Buy() {
 
               <div className={styles['pricing-buttons']}>
                 <a
-                  href="#"
+                  href="https://apps.microsoft.com/store/detail/9P9HRS797J64?cid=DevShareMCLPCS"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`${styles['platform-btn']} ${styles['platform-windows']}`}
                 >
                   <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
