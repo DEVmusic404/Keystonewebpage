@@ -15,6 +15,7 @@ import {
   Cpu,
   MemoryStick,
   HardDrive,
+  Languages,
 } from 'lucide-react'
 import styles from './Buy.module.css'
 
@@ -26,6 +27,7 @@ const features = [
   'Export & Import Resources',
   'Unlimited Students — No Per-Seat Cost',
   'Full Editor Control Over All Content',
+  'English & Spanish Language Support',
   'Lifetime Access — No Subscriptions',
 ]
 
@@ -59,6 +61,11 @@ const included = [
     icon: <Shield size={20} />,
     title: 'Complete Control',
     desc: 'Edit every AI-generated piece. You decide exactly what your students learn.',
+  },
+  {
+    icon: <Languages size={20} />,
+    title: 'English & Spanish',
+    desc: 'Switch the entire program between English and Spanish anytime with one click.',
   },
 ]
 

@@ -21,6 +21,7 @@ import {
   Users,
   Star,
   Bot,
+  Languages,
 } from 'lucide-react'
 import styles from './Features.module.css'
 
@@ -64,8 +65,11 @@ const highlights = [
     icon: <Share2 size={28} />,
     title: 'Export & Share',
     desc: 'Export assignments and tests to share with other Keystone families. Move your entire classroom to a new device with a single backup file — students, assignments, grades, and all.',
-  },
-]
+  },  {
+    icon: <Languages size={28} />,
+    title: 'English & Spanish',
+    desc: 'Switch the entire program between English and Spanish with one click. Toggle back and forth anytime \u2014 perfect for bilingual families or Spanish-speaking households.',
+  },]
 
 const dashboardFeatures = [
   { icon: <Palette size={14} />, text: '8 color themes — Ocean Blue, Royal Purple, Forest Green, and more' },
@@ -243,6 +247,32 @@ export default function Features() {
                 Import that backup file on any Keystone installation to move
                 your entire classroom to a new device, or share assignments
                 and tests with other Keystone families.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Help Chat & AI Chat */}
+      <section className={`${styles.section} ${styles.alt}`}>
+        <div className={styles.content}>
+          <div className={styles['detail-block']}>
+            <div className={styles['detail-icon']}>
+              <Languages size={32} />
+            </div>
+            <div>
+              <h2>English &amp; Spanish — Switch Anytime</h2>
+              <p>
+                Keystone Homeschool supports both <strong>English</strong> and{' '}
+                <strong>Spanish</strong>. Switch the entire interface between
+                languages with a single click inside the program. Menus,
+                buttons, labels, and navigation all update instantly.
+              </p>
+              <p>
+                Toggle back and forth whenever you want — there&rsquo;s no
+                lock-in. Whether your family speaks Spanish at home, you&rsquo;re
+                teaching in a bilingual household, or you simply prefer
+                Spanish, Keystone adapts to you.
               </p>
             </div>
           </div>
