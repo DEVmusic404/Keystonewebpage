@@ -227,6 +227,13 @@
   box-shadow: 0 4px 24px rgba(255, 193, 7, 0.1);
 }
 
+/* Disabled (Coming Soon) */
+.platform-disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .pricing-guarantee {
   text-align: center;
   margin-top: 16px;
