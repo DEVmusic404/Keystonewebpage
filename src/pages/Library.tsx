@@ -92,6 +92,14 @@ const albums: Album[] = [
     icon: '\u{1F30D}',
   },
   {
+    id: 'shaped-by-world',
+    title: 'Shaped by the World',
+    subject: 'Geography',
+    playlistId: 'OLAK5uy_ndMawq8nNVK850ZXJWPHU-4ltaAQqleJE',
+    thumbnail: 'https://i.ytimg.com/vi/npbixo8gxLg/hqdefault.jpg',
+    icon: '\u{1F5FA}',
+  },
+  {
     id: 'write-structure',
     title: 'The Write Structure',
     subject: 'English',
@@ -99,15 +107,24 @@ const albums: Album[] = [
     thumbnail: 'https://i.ytimg.com/vi/FA0oe4eUhM8/hqdefault.jpg',
     icon: '\u{270D}',
   },
+  {
+    id: 'taxation-theft',
+    title: 'Taxation = Theft',
+    subject: 'Restricted Reading',
+    playlistId: 'OLAK5uy_kWd_VIG3JinwIosQrom_JslLugRLbQ26g',
+    thumbnail: 'https://i.ytimg.com/vi/-48qooRTkGA/hqdefault.jpg',
+    icon: '\u{1F4B0}',
+  },
 ]
 
-const subjects = ['All', 'English', 'Math', 'Science', 'Geography']
+const subjects = ['All', 'English', 'Math', 'Science', 'Geography', 'Restricted Reading']
 
 const subjectColors: Record<string, string> = {
   English: '#2563eb',
   Math: '#2563eb',
   Science: '#2563eb',
   Geography: '#2563eb',
+  'Restricted Reading': '#2563eb',
 }
 
 /* Generate floating dust particles once */
