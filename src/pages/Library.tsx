@@ -91,6 +91,14 @@ const albums: Album[] = [
     thumbnail: 'https://i.ytimg.com/vi/eRRDtFBIGKY/hqdefault.jpg',
     icon: '\u{1F30D}',
   },
+  {
+    id: 'write-structure',
+    title: 'The Write Structure',
+    subject: 'English',
+    playlistId: 'OLAK5uy_ltAw6piTJ8C_vGROEmp6E7G4_CdIoJUDY',
+    thumbnail: 'https://i.ytimg.com/vi/FA0oe4eUhM8/hqdefault.jpg',
+    icon: '\u{270D}',
+  },
 ]
 
 const subjects = ['All', 'English', 'Math', 'Science', 'Geography']
