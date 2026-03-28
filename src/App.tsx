@@ -12,6 +12,7 @@ import Refund from './pages/Refund'
 import Settings from './pages/Settings'
 import Features from './pages/Features'
 import Onboarding from './pages/Onboarding'
+import Library from './pages/Library'
 import ScrollToTop from './components/ScrollToTop'
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path="/setup" element={<Settings />} />
           <Route path="/features" element={<Features />} />
           <Route path="/onboarding" element={<Onboarding />} />
+          <Route path="/library" element={<Library />} />
         </Routes>
       </main>
       <Footer />
