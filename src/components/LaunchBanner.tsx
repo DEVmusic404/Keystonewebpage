@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './LaunchBanner.module.css'
 
-const LAUNCH = new Date('2026-04-03T00:00:00').getTime()
+const LAUNCH = new Date('2026-04-10T00:00:00').getTime()
 
 function getTimeLeft() {
   const diff = LAUNCH - Date.now()
