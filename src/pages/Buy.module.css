@@ -234,6 +234,16 @@
   pointer-events: none;
 }
 
+/* Locked */
+.platform-locked {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.platform-locked svg {
+  color: var(--silver-dark);
+}
+
 .pricing-guarantee {
   text-align: center;
   margin-top: 16px;

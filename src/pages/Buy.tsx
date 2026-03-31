@@ -121,31 +121,28 @@ export default function Buy() {
 
               <div className={styles['pricing-buttons']}>
                 <a
-                  href="https://apps.microsoft.com/store/detail/9P9HRS797J64?cid=DevShareMCLPCS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`${styles['platform-btn']} ${styles['platform-windows']}`}
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className={`${styles['platform-btn']} ${styles['platform-windows']} ${styles['platform-locked']}`}
                 >
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                    <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
-                  </svg>
+                  <Lock size={22} />
                   <div>
-                    <span className={styles['btn-sub']}>Download from the</span>
+                    <span className={styles['btn-sub']}>Unlocks May 1, 2026</span>
                     <span className={styles['btn-main']}>Microsoft Store</span>
                   </div>
                 </a>
 
-                <span
-                  className={`${styles['platform-btn']} ${styles['platform-linux']} ${styles['platform-disabled']}`}
+                <a
+                  href="#"
+                  onClick={(e) => e.preventDefault()}
+                  className={`${styles['platform-btn']} ${styles['platform-linux']} ${styles['platform-locked']}`}
                 >
-                  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                    <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 0 0-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.368 1.884 1.43.868.07 1.883-.36 2.505-.867.626-.533.852-1.266.573-1.733-.27-.468-.927-.467-1.573-.267a3.56 3.56 0 0 1-.59.134c-.735.07-1.37-.07-1.856-.534-.279-.267-.42-.6-.436-.934a3.23 3.23 0 0 0 .879-.4c1.153-.867 2.013-2.001 2.627-3.269a9.99 9.99 0 0 0 .768-2.22c.023-.13.046-.265.064-.395a.84.84 0 0 0 .088-.26c0-.197-.093-.4-.233-.535a.86.86 0 0 0-.597-.2h-.001a.86.86 0 0 0-.597.2c-.009.009-.009.009-.018.018a6.965 6.965 0 0 1-.12-1.153 10.3 10.3 0 0 0-.252-2.335c-.229-.934-.625-1.767-1.277-2.335-.711-.6-1.298-.867-1.824-.901-.527-.035-1.003.134-1.44.468-.439.329-.836.794-1.197 1.269-.116.133-.225.27-.339.4-.394-.6-.878-1.069-1.478-1.335-.599-.268-1.272-.335-2.047-.268ZM9.66 11.937a.843.843 0 0 1 .54.199c.197.133.36.333.462.534a.84.84 0 0 1-.805 1.2.832.832 0 0 1-.54-.2.87.87 0 0 1-.327-.534.84.84 0 0 1 .67-1.2Zm4.597.2a.843.843 0 0 1 .737.4c.128.197.163.468.1.734a.84.84 0 0 1-.464.534.84.84 0 0 1-.67 0 .843.843 0 0 1-.464-.534.87.87 0 0 1 .098-.734.84.84 0 0 1 .663-.401Z" />
-                  </svg>
+                  <Lock size={22} />
                   <div>
-                    <span className={styles['btn-sub']}>Coming Soon</span>
+                    <span className={styles['btn-sub']}>Unlocks May 1, 2026</span>
                     <span className={styles['btn-main']}>Linux</span>
                   </div>
-                </span>
+                </a>
               </div>
 
               <p className={styles['pricing-guarantee']}>

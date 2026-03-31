@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './LaunchBanner.module.css'
 
-const LAUNCH = new Date('2026-04-10T00:00:00').getTime()
+const LAUNCH = new Date('2026-05-01T00:00:00').getTime()
 
 function getTimeLeft() {
   const diff = LAUNCH - Date.now()
@@ -49,7 +49,7 @@ export default function LaunchBanner() {
             <span className={styles.tag}>Sec</span>
           </div>
         </div>
-        <span className={styles.date}>April 3, 2026</span>
+        <span className={styles.date}>May 1, 2026</span>
       </div>
     </div>
   )
