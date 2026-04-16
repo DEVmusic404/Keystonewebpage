@@ -115,15 +115,40 @@ const albums: Album[] = [
     thumbnail: 'https://i.ytimg.com/vi/-48qooRTkGA/hqdefault.jpg',
     icon: '\u{1F4B0}',
   },
+  {
+    id: 'physics',
+    title: 'Physics',
+    subject: 'Science',
+    playlistId: 'OLAK5uy_mu7TKqJ37Ifkoq7a6Ot70twaZcEfkm8K8',
+    thumbnail: 'https://i.ytimg.com/vi/SpDh8oRoUh0/hqdefault.jpg',
+    icon: '\u{269B}\uFE0F',
+  },
+  {
+    id: 'bill-of-rights',
+    title: 'The Bill of Rights',
+    subject: 'History',
+    playlistId: 'OLAK5uy_kdazXoHnR9oWs9uTfJqqpJGq0GFJI6lf8',
+    thumbnail: 'https://i.ytimg.com/vi/MWv8M0BeGZc/hqdefault.jpg',
+    icon: '\u{1F4DC}',
+  },
+  {
+    id: 'in-your-genes',
+    title: 'In Your Genes',
+    subject: 'Science',
+    playlistId: 'OLAK5uy_lVdRIMoobhTzxZn7kMJHi7MiLyGRnx-Pg',
+    thumbnail: 'https://i.ytimg.com/vi/FvHX7ZSU8Oc/hqdefault.jpg',
+    icon: '\u{1F52C}',
+  },
 ]
 
-const subjects = ['All', 'English', 'Math', 'Science', 'Geography', 'Restricted Reading']
+const subjects = ['All', 'English', 'Math', 'Science', 'Geography', 'History', 'Restricted Reading']
 
 const subjectColors: Record<string, string> = {
   English: '#2563eb',
   Math: '#2563eb',
   Science: '#2563eb',
   Geography: '#2563eb',
+  History: '#2563eb',
   'Restricted Reading': '#2563eb',
 }
 
