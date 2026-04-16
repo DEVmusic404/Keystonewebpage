@@ -132,6 +132,14 @@ const albums: Album[] = [
     icon: '\u{1F4DC}',
   },
   {
+    id: 'the-constitution',
+    title: 'The Constitution',
+    subject: 'History',
+    playlistId: 'OLAK5uy_lUatuDMqGTi8rnDo9wRL1VtNpS5ewRQxg',
+    thumbnail: 'https://i.ytimg.com/vi/_Eskxc7K3tI/hqdefault.jpg',
+    icon: '\u{1F3DB}\uFE0F',
+  },
+  {
     id: 'in-your-genes',
     title: 'In Your Genes',
     subject: 'Science',
