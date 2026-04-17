@@ -140,6 +140,14 @@ const albums: Album[] = [
     icon: '\u{1F3DB}\uFE0F',
   },
   {
+    id: 'american-wars',
+    title: 'American Wars',
+    subject: 'History',
+    playlistId: 'OLAK5uy_nbW81YTaHcuNWy4RPvBhkQjPmRbQ4i5e4',
+    thumbnail: 'https://i.ytimg.com/vi/ajZtKwbLXWQ/hqdefault.jpg',
+    icon: '\u{1F4A5}',
+  },
+  {
     id: 'in-your-genes',
     title: 'In Your Genes',
     subject: 'Science',
