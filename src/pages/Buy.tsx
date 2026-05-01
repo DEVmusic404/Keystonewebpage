@@ -121,13 +121,14 @@ export default function Buy() {
 
               <div className={styles['pricing-buttons']}>
                 <a
-                  href="#"
-                  onClick={(e) => e.preventDefault()}
-                  className={`${styles['platform-btn']} ${styles['platform-windows']} ${styles['platform-locked']}`}
+                  href="https://apps.microsoft.com/detail/9P9HRS797J64?hl=en-us&gl=US&ocid=pdpshare"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`${styles['platform-btn']} ${styles['platform-windows']}`}
                 >
-                  <Lock size={22} />
+                  <Download size={22} />
                   <div>
-                    <span className={styles['btn-sub']}>Unlocks May 1, 2026</span>
+                    <span className={styles['btn-sub']}>Available Now</span>
                     <span className={styles['btn-main']}>Microsoft Store</span>
                   </div>
                 </a>
@@ -139,14 +140,14 @@ export default function Buy() {
                 >
                   <Lock size={22} />
                   <div>
-                    <span className={styles['btn-sub']}>Unlocks May 1, 2026</span>
+                    <span className={styles['btn-sub']}>Coming Soon</span>
                     <span className={styles['btn-main']}>Linux</span>
                   </div>
                 </a>
               </div>
 
               <p className={styles['pricing-guarantee']}>
-                <Lock size={14} />
+                <ShieldCheck size={14} />
                 Secure download &bull; One-time purchase
               </p>
             </div>
