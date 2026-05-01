@@ -46,7 +46,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 1360px;
   margin: 0 auto;
   padding: 0 24px;
   position: relative;
@@ -58,16 +58,17 @@
 .navbar-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-family: var(--font-heading);
-  font-size: 1.35rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--white);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .navbar-logo .logo-img {
-  height: 36px;
+  height: 30px;
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 0 8px rgba(37, 99, 235, 0.3));
@@ -87,19 +88,20 @@
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
 }
 
 .navbar-links a {
   font-family: var(--font-heading);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--silver-dark);
   transition: all 0.25s;
   position: relative;
-  padding: 8px 14px;
+  padding: 7px 9px;
   border-radius: 8px;
   letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .navbar-links a::before {
@@ -145,8 +147,8 @@
 /* ===== CTA Button ===== */
 
 .navbar-cta {
-  padding: 9px 22px !important;
-  font-size: 0.88rem !important;
+  padding: 8px 16px !important;
+  font-size: 0.82rem !important;
   border-radius: 8px !important;
   position: relative;
   overflow: hidden;
